@@ -1,46 +1,92 @@
+# 📡 Network Routing & Congestion Control Simulation  
+### Scilab + NARVAL Toolbox Implementation
 
 ---
 
-# 📈 Graph Outputs
+## 📌 Project Overview
 
-The project generates:
+This project implements and analyzes **Routing Algorithms** and **Congestion Control Mechanisms** using **Scilab** with the **NARVAL Toolbox**.
 
-- Routing time comparison graph
-- 200 vs 300 congestion comparison graph
-- 500 topology method comparison graph
-- Node reduction performance graph
-- Network topology visualizations
+The objective is to simulate different network topologies, evaluate shortest-path routing performance, apply ARC-based congestion control, and analyze execution time across varying network sizes.
 
 ---
 
-# 🧠 Key Observations
+## 🛠️ Technologies Used
 
-- Congestion time increases as number of nodes increases.
-- Scale-Free networks show higher congestion due to hub concentration.
-- Grid networks distribute traffic more uniformly.
-- Node reduction significantly lowers congestion time.
-
----
-
-# 🎓 Learning Outcomes
-
-- Understanding of shortest path algorithms
-- Congestion control concepts
-- Network topology behavior
-- Performance analysis
-- Visualization of complex networks
+- **Scilab**
+- **NARVAL Toolbox**
+- Graph Visualization
+- Performance Measurement using `timer()`
 
 ---
 
-# 🏁 Conclusion
+# 🚀 Task 1 – Routing Algorithm Analysis
 
-This project demonstrates how routing efficiency and congestion control performance vary with network size and topology type.
+## 🎯 Objectives
 
-Dijkstra is computationally more efficient than Bellman-Ford for larger networks, while congestion handling complexity increases proportionally with node growth.
+- Generate network topologies from **5 to 100 nodes**
+- Apply:
+  - **Dijkstra Algorithm**
+  - **Bellman-Ford Algorithm**
+- Measure execution time
+- Visualize network topologies
+- Plot performance comparison graph
 
 ---
 
-# 👤 Author
+## 🔍 Implementation Workflow
 
-Aryaman Singh  
-VIT Chennai
+1. Generate topology using locality-based method.
+2. Select random source node.
+3. Compute shortest paths using:
+   - Bellman-Ford
+   - Dijkstra
+4. Measure execution time (averaged over multiple runs).
+5. Print results in console.
+6. Plot time comparison graph.
+
+---
+
+## 📊 Key Observations
+
+- Dijkstra performs significantly faster than Bellman-Ford for larger networks.
+- Execution time increases as node count increases.
+- Performance gap widens as network grows.
+
+---
+
+# 🚦 Task 2 – Congestion Control Analysis
+
+## 🔹 Part 1: 200 → 300 Nodes
+
+- Generate 200-node network
+- Increase to 300 nodes
+- Visualize both networks
+- Apply ARC-based congestion control
+- Measure execution duration
+- Plot comparison graph
+
+---
+
+## 🔹 Part 2: 500 Node Network (5 Topology Methods)
+
+Networks generated using:
+
+- Locality
+- Random
+- Grid
+- Small-World
+- Scale-Free
+
+For each topology:
+
+- Visualize network
+- Perform congestion mapping
+- Measure execution time
+- Compare performance using bar graph
+
+---
+
+## 🔹 Part 3: Node Reduction Analysis
+
+Network size reduced as:
